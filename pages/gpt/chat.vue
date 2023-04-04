@@ -21,12 +21,12 @@
 			<image @click="send" src="../../static/send.png">
 		</view>
 
-		<view class="gpt" v-show="isAnswering">
+<!-- 		<view class="gpt" v-show="isAnswering">
 			<image src="../../static/logo.png">
 				<view class="answer">
 					<p>加载中...</p>
 				</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -68,7 +68,7 @@
 					return
 				}
 				if (this.question.trim() !== '') {
-					console.log(this.question)
+					// console.log(this.question)
 					this.context.push(this.question)
 					this.q = this.question //中间变量转接
 					this.question = ''
@@ -89,7 +89,10 @@
 				        console.log(res.data);
 						this.answer = res.data
 						  this.response()
-				    }
+				    },
+					fail(err) {
+						console.log(err);
+					}
 				});
 			},
 			send() {

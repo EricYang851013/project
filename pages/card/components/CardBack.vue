@@ -6,7 +6,7 @@
 			<p class="card_short">{{ card.short_three }}</p>
 		</view>
 		<view class="card_body">
-			<Content :card="card.main"></Content>
+			<Content :card="card.mainArr"></Content>
 		</view>
 	</view>
 </template>
@@ -36,18 +36,20 @@
 <style lang="scss">
 .card_back {
   position: relative;
-  top: 40px;
+  top: 20px;
   padding-top: 250px;
+  padding-bottom: 150px;
   // padding-left: 50px;
   // padding-right: 50px;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   border-radius: 5px;
   color: #000000;
   background-color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 200%;
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.6s ease;

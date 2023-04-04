@@ -2,37 +2,35 @@
 	<view class="me">
 		<view class="loge">
 			<view class="head">
-				<!-- <image src="../../../static/touxiang.png" mode=""></image> -->
+				<image src="../../static/acount.png" mode=""></image>
 			</view>
 			<view class="func" @click="login" v-show="!$store.state.islogin">
 				<text>点击注册/登录</text>
 			</view>
-			<!-- <view class="name" v-show="$store.state.islogin">
+			<view class="name" v-show="$store.state.islogin">
 				用户-{{$store.state.email}}
-			</view> -->
+				<text>退出登录</text>
+			</view>
 		</view>
 		<view class="detail">
 			<view class="addANode" @click="goToNode">
-				<!-- <image src="../../../static/tianjiajiedian.png" mode=""></image> -->
-				<text>添加节点</text>
-				<!-- <image src="../../../static/you.png" mode="" class="right"></image> -->
+				<text>添加卡片</text>
+				<image src="../../static/you.png" mode="" class="right"></image>
 			</view>
 			<view class="feedback" @click="feedBack">
-				<!-- <image src="../../../static/fankui.png" mode=""></image> -->
 				<text>问题反馈</text>
-				<!-- <image src="../../../static/you.png" mode="" class="right" ></image> -->
+				<image src="../../static/you.png" mode="" class="right" ></image>
 			</view>
 			<view class="aboutUs" @click="aboutUs">
-				<!-- <image src="../../../static/guanyu.png" mode=""></image> -->
 				<text>关于我们</text>
-				<!-- <image src="../../../static/you.png" mode="" class="right"></image> -->
+				<image src="../../static/you.png" mode="" class="right"></image>
 			</view>
 		</view>
 	</view>
 </template>
  
 <script>
-	// import loginVue from './components/login.vue'
+	import login from './components/login.vue'
 	// import Components1 from '../me/components/components.vue'
 	export default {
 		data() {
@@ -44,6 +42,9 @@
 				i:0
 			}
 		},
+		components:{
+			login
+		},
 		methods:{
 			goToNode(){
 				if(!this.$store.state.islogin){
@@ -52,13 +53,13 @@
 					})
 				}else{
 					uni.navigateTo({
-						url:'../me/components/addNode',
+						url:'./components/addCard',
 					})
 				}
 			},
 			feedBack(){
 				uni.navigateTo({
-					url:'/pages/tabar/me/components/feedback'
+					url:'./components/feedBack'
 				})
 			},
 			aboutUs(){
@@ -67,9 +68,6 @@
 				})
 			},
 			login(){
-				// uni.navigateTo({
-				// 	url:'./components/components'
-				// })
 				uni.navigateTo({
 					url: './components/login'
 				})
@@ -128,52 +126,32 @@
 			}).then((res)=>{
 				this.area = res;
 			})
-			// 请求大棚节点信息
-			uni.request({
-				url:'http://121.36.5.157:5000/api/getUserInfo',
-				method:'POST',
-				data:{
-					email:this.$store.state.email
-				},
-				success: (res) => {
-					var a =1
-					// console.log(a);
-					// console.log(res.data); 
-					a++
-					// console.log(a);
-					this.range = res.data.list
-					// 注意这里的赋值，其实两个变量指向的同一块内存空间
-					// this.infor[this.value].value = res.data.list
-					// this.range = [...res.data.list]; // 创建一个副本
-					for(let i=0;i<this.range.length;i++){
-						this.range[i].text = res.data.list[i].dapeng_name
-						this.range[i].value = i
-						this.range[i].node_number = res.data.list[i].mqtt_id
-					}
-					// console.log("www"+this.range[this.value].index);
-				}
-			})
 		},
-	
 	}
 </script>
  
 <style lang="less">
 	.me{
-		// background-image: url("../../../static/wode.png");
+		background-image: url("../../static/denglubeijing.png");
+		background-position: center;
+		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100vw;
 		height: 400rpx;
 		position: absolute;
 		.loge{
+			// background-color: rgba(ff ,ff,ff,.5);
 			width: 85vw;
 			box-shadow: 2rpx 6rpx 10rpx 0 rgba(0, 0, 0, 0.1), 0 6rpx 20rpx 0 rgba(0, 0, 0, 0.1);
 			border-radius: 30rpx;
+			// border: 1px solid rgba(0,0,0,0.3);
 			background-color: white;
+			// background-image: linear-gradient(to top, #ffffff 30%, #d5893c);
+			// opacity: 0.5;
 			height: 280rpx;
 			margin: 0% auto;
 			position: relative;
-			top: 50%;
+			top: 70%;
 			display: flex;
 			flex-direction: column;
 			.head{
@@ -198,6 +176,10 @@
 				position: relative;
 				top: -20%;
 				margin: 0% auto;
+				text{
+					margin: 5px auto;
+					color: #0000ff;
+				}
 			}
 			.information{
 				display: flex;

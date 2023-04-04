@@ -1,6 +1,6 @@
 <template>
 	<view class="content" :style="{height:btom}">
-		<CardBar title="card" left="search" right="crosshairs"></CardBar>
+		<CardBar title="" left="search" right="crosshairs"></CardBar>
 		<TabList></TabList>
 		<card-list></card-list>
 		<CardDetails></CardDetails>
@@ -44,7 +44,7 @@
 		color: white;
 		/* background-image: linear-gradient(to top, #99acbe 5%, #a8b3bf 20%, #cfd7dd); */
 		background-color: #ecedef;
-		/* background-image: url('../.././static/caoyao_card/brijing1.jpg'); */
+		background-image: url('../.././static/caoyao_card/brijing1.jpg');
 		/* background-position-y: 20px; */
 		/* background-size: 100%; */
 		background-size: cover;

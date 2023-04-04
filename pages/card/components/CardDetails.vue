@@ -15,12 +15,13 @@
 		data() {
 			return {
 				cardFrontStyle: {
-					width: '100vw',
+					// width: '100vw',
 					left: '0',
 					right: '0',
+					// transform: 'scale(1.5)',
+					transform: 'translateY(-150px)',
 					borderRadius: '0px',
-					boxShadow: 'none',
-					transition: 'all 0.6s ease'
+					boxShadow: 'none'
 				}
 			}
 		},
@@ -86,9 +87,6 @@
     border-radius: 0;
     box-shadow: none;
   }
-  .card_front{
-	  background-color: #000;
-  }
 }
 .show-enter-to,
 .show-leave {
@@ -96,11 +94,11 @@
     border-radius: 0;
   }
   .card_front {
-    // left: 0;
-    // right: 0;
+    left: 0;
+    right: 0;
     border-radius: 0;
     box-shadow: none;
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -150px, 0);
   }
 }
 .show-leave-to,
@@ -109,16 +107,15 @@
     border-radius: 4px;
   }
   .card_front {
-    // left: 16px;
-    // right: 16px;
+    left: 16px;
+    right: 16px;
     border-radius: 4px;
     box-shadow: 0 22px 16px -12px rgba(0, 0, 0, 0.2);
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -100px, 0);
   }
 }
 .show-enter-active,
 .show-leave-active {
 	transition: all 0.5s ease;
-
 }
 </style>
