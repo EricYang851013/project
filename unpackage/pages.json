@@ -1,0 +1,182 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/card/card",
+			"navigationBarBackgroundColor": "",
+			"navigationStyle": "custom",
+			"app-plus": {  
+				"titleNView": false  
+			}
+		},{
+            "path" : "pages/gpt/gpt",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/map/map",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/acount/acount",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+			"path": "pages/map/hubei"
+		},{
+			"path": "pages/gpt/chat"
+		}
+        ,{
+            "path" : "pages/card/components/CardBar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/Card",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/CardList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/CardFront",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/CardBack",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/CardDetails",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/Content",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/card/components/TabList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/acount/components/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/acount/components/submit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/acount/components/feedBack",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "问题反馈",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+		    "path" : "pages/acount/components/addCard",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "添加卡片",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "一药一方",
+		"navigationBarBackgroundColor": "rgba(59,168,122)",
+		"backgroundColor": "#F8F8F8",
+		"navigationBarHidden": true
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#999",
+		"selectedColor": "#99acbe",
+		"borderStyle": "none",
+		"backgroundColor": "#e4e0df",
+		"list": [
+			{
+				"pagePath": "pages/card/card",
+				"text": "卡片",
+				"iconPath": "static/daohanglan/shouye-unchecked.png",
+				"selectedIconPath": "static/daohanglan/shouye-checked.png"								
+			}, {
+				"pagePath": "pages/gpt/gpt",
+				"text": "问答",
+				"iconPath":"static/daohanglan/kongzhi-unchecked.png",
+				"selectedIconPath": "static/daohanglan/kongzhi-checked.png"
+			}, {
+				"pagePath": "pages/map/map",
+				"text": "地图",
+				"iconPath": "static/daohanglan/shibie-unchecked.png",
+				"selectedIconPath": "static/daohanglan/shibie-checked.png"
+			}, {
+				"pagePath": "pages/acount/acount",
+				"text": "我的",
+				"iconPath": "static/daohanglan/wode-unchecked.png",
+				"selectedIconPath": "static/daohanglan/wode-checked.png"
+			}
+		]
+	}
+}
